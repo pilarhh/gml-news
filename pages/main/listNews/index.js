@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { BsClock } from "react-icons/Bs";
 
 export default function ListNews() {
   const router = useRouter();
@@ -40,19 +39,16 @@ export default function ListNews() {
                     height={200}
                   />
                   <p className="mt-2 fs-4 fw-bold">{item.title}</p>
+                  <p className="ms-2">{item.timecreated}</p>
                   <div className="d-flex">
-                    <BsClock className="mt-1" />
-                    <p className="ms-2">{item.timecreated}</p>
-                  </div>
-                  <div className="d-flex">
-                  <button
-                    className="rounded-3 btn-pink p-1 shadow text-white w-100"
-                    onClick={() =>
-                      router.push(`/main/detailArticle/${item.id}`)
-                    }
-                  >
-                    Read Now
-                  </button>
+                    <button
+                      className="rounded-3 btn-pink p-1 shadow text-white w-100"
+                      onClick={() =>
+                        router.push(`/main/detailArticle/${item.id}`)
+                      }
+                    >
+                      Read Now
+                    </button>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { BsTrash } from "react-icons/Bs";
-import {AiOutlineEdit} from "react-icons/ai"
 import fetcher from "../../api/fetcher";
 import Navbar from "../navbar";
 
@@ -58,11 +56,9 @@ export default function ListNews() {
           height={200}
         />
         <p className="mt-4">{data.body}</p>
-        <div className="d-flex flex">
-          <BsTrash className="h4 pointer" onClick={handleDelete} />
-          <p className="ms-2"> ← Delete article</p>
-          <AiOutlineEdit className="ms-4 h4 pointer" onClick={()=>router.push(`/main/updateNews/${data.id}`)} />
-          <p className="ms-2"> ← Edit article</p>
+        <div className="d-flex flex mt-2">
+          <button className="ms-2 bg-pink rounded p-2 text-white" onClick={handleDelete}>Delete article</button>
+          <button className="ms-2 bg-pink rounded p-2 text-white" onClick={()=>router.push(`/main/updateNews/${data.id}`)}>Edit article</button>
         </div>
       </div>
     </>
