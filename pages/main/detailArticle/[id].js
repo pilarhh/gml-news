@@ -52,13 +52,23 @@ export default function ListNews() {
           className="rounded-3 mt-2"
           src={data.image}
           alt="image"
-          width={200}
-          height={200}
+          height={500}
+          width={950}
         />
         <p className="mt-4">{data.body}</p>
         <div className="d-flex flex mt-3 justify-content-center">
-          <button className="ms-2 bg-pink rounded p-2 text-white" onClick={handleDelete}>Delete article</button>
-          <button className="ms-2 bg-pink rounded p-2 text-white" onClick={()=>router.push(`/main/updateNews/${data.id}`)}>Edit article</button>
+          <button
+            className="ms-2 bg-pink rounded p-2 text-white"
+            onClick={handleDelete}
+          >
+            Delete article
+          </button>
+          <button
+            className="ms-2 bg-pink rounded p-2 text-white"
+            onClick={() => router.push(`/main/updateNews/${data.id}`)}
+          >
+            Edit article
+          </button>
         </div>
       </div>
     </>
