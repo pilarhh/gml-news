@@ -35,7 +35,7 @@ export default function ListNews() {
                     className="rounded-3"
                     src={item.image}
                     alt="image"
-                    width={200}
+                    width={300}
                     height={200}
                   />
                   <p className="mt-2 fs-4 fw-bold">{item.title}</p>
