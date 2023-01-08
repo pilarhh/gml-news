@@ -56,7 +56,7 @@ export default function ListNews() {
           height={200}
         />
         <p className="mt-4">{data.body}</p>
-        <div className="d-flex flex mt-2">
+        <div className="d-flex flex mt-3 justify-content-center">
           <button className="ms-2 bg-pink rounded p-2 text-white" onClick={handleDelete}>Delete article</button>
           <button className="ms-2 bg-pink rounded p-2 text-white" onClick={()=>router.push(`/main/updateNews/${data.id}`)}>Edit article</button>
         </div>
