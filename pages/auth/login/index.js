@@ -12,7 +12,7 @@ export default function Login() {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  const url = `https://www.onegml.com/dlsapi/index.php/candidates/login`;
+  const url = `${process.env.NEXT_PUBLIC_URL}/login`;
   const handleLogin = () => {
     console.log(form);
     fetcher("POST", url, {
